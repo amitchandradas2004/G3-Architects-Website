@@ -103,7 +103,39 @@ main > section {
 #quick-list {
   font-weight: 500;
 }
-
+/* Features you will love & enjoy section */
+.features {
+  gap: 100px;
+}
+#feature-section-title {
+  border-left: 5px solid #ff900e;
+  padding-left: 10px;
+}
+.feature-card {
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px 0 rgb(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+}
+.feature-card .feature-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin: 0 0;
+}
+#Experience-badge {
+  padding: 45px 42px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: -100px;
+  margin-left: -100px;
+}
+#Experience-year {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.featured-architect img {
+  width: 100%;
+}
 /* Some Facts Related Styles */
 .facts-container {
   display: grid;
@@ -151,13 +183,29 @@ main > section {
 .sponsor-companies img {
   filter: grayscale(100%);
 }
+.footer-info {
+  max-width: 1440px;
+  width: 0 auto;
+  display: flex;
+  border: 1px solid #ff900e;
+  border-radius: 8px;
+  padding: 40px;
+  background-color: #fff4e7;
+  margin: 130px;
+  justify-content: center;
+  align-items: center;
+}
+.footer-info:hover {
+  background-color: rgb(208, 237, 222);
+}
 
 /* Responsive Media Qyary */
 @media screen and (max-width: 576px) {
   .navbar,
   .nav-links,
   .teams,
-  .sponsor-companies {
+  .sponsor-companies,
+  .features {
     flex-direction: column;
   }
   .nav-links,
@@ -176,6 +224,11 @@ main > section {
   .sponsor-companies {
     grid-template-columns: repeat(1, 1fr);
   }
+  #Experience-badge {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
   .our-features,
   .sponsor-info,
   .sponsor-companies {
@@ -189,17 +242,26 @@ main > section {
     justify-items: center;
     gap: 50px;
   }
+  .footer-info {
+    align-items: center;
+    margin: 20px 20px;
+    align-items: center;
+  }
 }
 
 /* Medium Size Device */
 @media screen and (min-width: 576px) and (max-width: 992px) {
-  .teams {
+  .teams,
+  .features {
     flex-direction: column;
   }
   .our-features {
     margin: 50px auto;
   }
-  .some-facts-title{
+  #Experience-badge {
+    margin: 0 auto;
+  }
+  .some-facts-title {
     justify-items: center;
   }
   .facts-container {
@@ -211,5 +273,10 @@ main > section {
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     justify-items: center;
+  }
+  .footer-info {
+    align-items: center;
+    margin: 40px 30px;
+    align-items: center;
   }
 }
